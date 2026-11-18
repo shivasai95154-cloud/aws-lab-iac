@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AWS Lab – App 1</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:'Bricolage Grotesque',system-ui,sans-serif;min-height:100vh;background:#3355ff;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:2.5rem 6vw}
+a{color:#fff}
+.back{font-weight:500;text-decoration:none;border-bottom:2px solid #fff;align-self:flex-start;padding-bottom:2px}
+h1{font-size:clamp(4rem,18vw,13rem);font-weight:800;letter-spacing:-.05em;line-height:.9}
+.sub{margin-top:1.2rem;font-size:1.2rem;max-width:44ch;opacity:.92}
+.server{display:inline-block;margin-top:2rem;background:#fff;color:#10163a;border-radius:14px;padding:1rem 1.4rem;font-size:1.1rem}
+.server small{display:block;font-size:.8rem;color:#5b6285;margin-bottom:.2rem}
+.server b{font-size:1.5rem}
+.links{display:flex;gap:1.5rem;flex-wrap:wrap}
+@media(prefers-reduced-motion:no-preference){h1{animation:in .6s ease-out}@keyframes in{from{opacity:0;transform:translateY(16px)}}}
+</style></head><body>
+<a class="back" href="http://__ALB_DNS__/">Back to home</a>
+<main><h1>App 1</h1>
+<p class="sub">This page came from the app1-tg target group. Refresh a few times and watch the server name change as the load balancer rotates requests.</p>
+<div class="server"><small>Served by</small><b>__SERVER__</b></div></main>
+<div class="links"><a href="http://__ALB_DNS__/">Home</a><a href="http://__ALB_DNS__/app2/">Go to App 2</a></div>
+</body></html>
