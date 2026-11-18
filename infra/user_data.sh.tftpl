@@ -1,0 +1,9 @@
+#!/bin/bash
+dnf install -y nginx
+systemctl enable --now nginx
+mkdir -p ${dest_dir}
+cat > ${dest_dir}/index.html <<'HTML_EOF'
+${page}
+HTML_EOF
+sed -i "s|__SERVER__|$(hostname)|g" ${dest_dir}/index.html
+systemctl restart nginx
