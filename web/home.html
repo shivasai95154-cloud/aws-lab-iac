@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AWS Lab – Home</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:'Bricolage Grotesque',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;background:#fff;color:#10163a}
+header{padding:2.5rem 6vw 1.5rem}
+h1{font-size:clamp(2.4rem,7vw,5rem);font-weight:800;letter-spacing:-.03em;line-height:1}
+header p{margin-top:.8rem;font-size:1.1rem;max-width:46ch;color:#4a5170}
+.split{flex:1;display:grid;grid-template-columns:1fr 1fr}
+.tile{display:flex;flex-direction:column;justify-content:flex-end;padding:3rem 6vw;min-height:46vh;text-decoration:none;color:#fff;transition:flex .3s}
+.tile h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.tile p{margin-top:.5rem;font-size:1.05rem;opacity:.9}
+.tile span{margin-top:1.4rem;align-self:flex-start;border:2px solid #fff;border-radius:99px;padding:.55rem 1.3rem;font-weight:500;transition:.2s}
+.tile:hover span,.tile:focus-visible span{background:#fff;color:#10163a}
+.a1{background:#3355ff}.a2{background:#0f9d58}
+footer{padding:1rem 6vw;font-size:.9rem;color:#4a5170}
+footer b{color:#10163a}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+</style></head><body>
+<header><h1>AWS Load Balancer Lab</h1>
+<p>You reached the home page through the Application Load Balancer. Pick an app to see path-based routing in action.</p></header>
+<main class="split">
+<a class="tile a1" href="http://__ALB_DNS__/app1/"><h2>App 1</h2><p>Routed by the rule /app1* to app1-tg</p><span>Open App 1</span></a>
+<a class="tile a2" href="http://__ALB_DNS__/app2/"><h2>App 2</h2><p>Routed by the rule /app2* to app2-tg</p><span>Open App 2</span></a>
+</main>
+<footer>Home page served by: <b>__SERVER__</b></footer>
+</body></html>
